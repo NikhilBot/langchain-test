@@ -17,11 +17,11 @@ def call_model(state: AgentState):
 
 # 3. Build the graph structure
 workflow = StateGraph(AgentState)
-workflow.add_node("agent", call_model)
+workflow.add_node("agenttest", call_model)
 
 # Set execution flow: START -> agent -> END
-workflow.add_edge(START, "agent")
-workflow.add_edge("agent", END)
+workflow.add_edge(START, "agenttest")
+workflow.add_edge("agenttest", END)
 
 # 4. Compile the graph into an executable application
 graph = workflow.compile()
