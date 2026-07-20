@@ -11,7 +11,7 @@ class AgentState(TypedDict):
 # 2. Define the core node (the thinking brain of the agent)
 def call_model(state: AgentState):
     # Initializes the LLM model
-    model = ChatOpenAI(model="gpt-4o-mini")
+    model = ChatOpenAI(model="gpt-5.4")
     response = model.invoke(state["messages"])
     return {"messages": [response]}
 
